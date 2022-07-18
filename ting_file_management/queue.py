@@ -12,4 +12,6 @@ class Queue:
         return self.fila.pop(0)
 
     def search(self, index):
-        """Aqui irá sua implementação"""
+        if index < 0 or index > (len(self.fila) - 1):
+            raise IndexError
+        return self.fila[index]
