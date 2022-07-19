@@ -32,7 +32,7 @@ def search_by_word(word, instance):
 
         for line in range(len(total_lines)):
             if word.lower() in total_lines[line].lower():
-                line_counting.append({ 
+                line_counting.append({
                     "linha": line + 1,
                     "conteudo": total_lines[line]
                 })
