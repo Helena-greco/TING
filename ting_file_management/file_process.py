@@ -5,7 +5,7 @@ import sys
 def process(path_file, instance):
     list_of_paths = list()
 
-#confirmando se existe instancia da fila
+# confirmando se existe instancia da fila
 # consultei o repo https://github.com/tryber/sd-014-b-project-ting/pull/7
 # para a solução de ignorar path já existente
     if len(instance) > 0:
