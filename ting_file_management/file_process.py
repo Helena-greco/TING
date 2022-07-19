@@ -6,7 +6,7 @@ def process(path_file, instance):
     list_of_paths = list()
     list_of_files = dict()
 
-    for index in  range(len(instance)):
+    for index in range(len(instance)):
         list_of_paths.append(instance.search(index))
 
     if path_file not in list_of_paths:
@@ -22,7 +22,7 @@ def process(path_file, instance):
 
 def remove(instance):
     if len(instance) == 0:
-        sys.stdout.write(f"Não há elementos\n")
+        sys.stdout.write("Não há elementos\n")
 
     else:
         path_file = instance.dequeue()["nome_do_arquivo"]
