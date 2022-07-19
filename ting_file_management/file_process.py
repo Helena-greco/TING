@@ -5,9 +5,8 @@ import sys
 def process(path_file, instance):
     list_of_paths = list()
     list_of_files = dict()
-    index_instance = range(len(instance))
 
-    for index in index_instance:
+    for index in  range(len(instance)):
         list_of_paths.append(instance.search(index))
 
     if path_file not in list_of_paths:
@@ -22,16 +21,17 @@ def process(path_file, instance):
 
 
 def remove(instance):
-    if not len(instance):
-        sys.stdout.write("Não há elementos")
+    if len(instance) == 0:
+        sys.stdout.write(f"Não há elementos\n")
 
-    path_file = instance.dequeue()["nome_do_arquivo"]
-    sys.stdout.write(f"Arquivo {path_file} removido com sucesso\n")
+    else:
+        path_file = instance.dequeue()["nome_do_arquivo"]
+        sys.stdout.write(f"Arquivo {path_file} removido com sucesso\n")
 
 
 def file_metadata(instance, position):
-    if not position:
+    try:
+        files = instance.search(position)
+        sys.stdout.write(str(files))
+    except IndexError:
         sys.stderr.write("Posição inválida")
-
-    files = instance.search(position)
-    sys.stdout.write(str(files))
