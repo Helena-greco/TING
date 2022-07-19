@@ -9,7 +9,7 @@ def process(path_file, instance):
 
     for index in index_instance:
         list_of_paths.append(instance.search(index))
-    
+
     if path_file not in list_of_paths:
         file = txt_importer(path_file)
 
@@ -19,6 +19,7 @@ def process(path_file, instance):
 
     instance.enqueue(list_of_files)
     sys.stdout.write(str(list_of_files))
+
 
 def remove(instance):
     """Aqui irá sua implementação"""
